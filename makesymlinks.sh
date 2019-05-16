@@ -31,7 +31,16 @@ for file in $files; do
 done
 
 # updating iterm2 preferences
+# Currently, this links to /users/jared/dotfiles/preferences for PrefsCustomFolder
+# This may need to be updated programatically to prevent issues with preferences not being loaded correctly.
+
+# If you just use the symlink, anytime you change something inside iterm2, it deletes the symlink and creates a new
+# preference file com.googlecode.iterm2.plist 
+
 echo "Removing old preferences"
 rm ~/Library/Preferences/com.googlecode.iterm2.plist
 echo "creating symlink for new preferences"
 ln -s ~/dotfiles/preferences/com.googlecode.iterm2.plist ~/Library/Preferences/com.googlecode.iterm2.plist
+
+
+
