@@ -74,7 +74,7 @@ source /usr/local/opt/zsh-syntax-highlighting
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git node npm brew sudo alias-tips)
+plugins=(git node npm brew sudo alias-tips z)
 
 
 # User configuration

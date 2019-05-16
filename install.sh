@@ -23,6 +23,12 @@ git clone https://github.com/djui/alias-tips.git ~/.oh-my-zsh/custom/plugins/ali
 # Create dev directories
 mkdir $HOME/Dev
 
+
+
+
+
+
+
 # Set macOS preferences
 # We will run this last because this will reload the shell
 source .macos
