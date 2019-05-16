@@ -28,6 +28,7 @@ cask 'firefox'
 cask 'google-chrome'
 cask 'transmit'
 cask 'vlc'
+cask 'timing'
 
 # Fonts
 cask 'font-hack-nerd-font'
