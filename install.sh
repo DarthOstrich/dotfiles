@@ -19,3 +19,10 @@ git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/theme
 
 # Install oh-my-zsh plugins
 git clone https://github.com/djui/alias-tips.git ~/.oh-my-zsh/custom/plugins/alias-tips
+
+# Create dev directories
+mkdir $HOME/Dev
+
+# Set macOS preferences
+# We will run this last because this will reload the shell
+source .macos
