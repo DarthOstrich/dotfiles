@@ -11,5 +11,11 @@ fi
 brew tap homebrew/bundle
 brew bundle
 
-# Make ZSH the default shell environment
-chsh -s $(which zsh)
+# Install oh-my-zsh to $HOME directory
+sh -c "$(cd && curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+# Install Powerlevel9K theme
+git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
+
+# Install oh-my-zsh plugins
+git clone https://github.com/djui/alias-tips.git ~/.oh-my-zsh/custom/plugins/alias-tips

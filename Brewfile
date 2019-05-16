@@ -1,12 +1,13 @@
 # Taps
 tap 'caskroom/cask'
-# tap 'caskroom/fonts'
+tap 'caskroom/fonts'
 # tap 'caskroom/versions'
 
-# Install ZSH
+# Install ZSH and plugins/themes
 brew 'zsh'
 # brew 'zsh-completions'
-# brew 'zsh-autosuggestions'
+brew 'zsh-autosuggestions'
+brew 'zsh-syntax-highlighting'
 
 # Install Binaries
 brew 'awscli'
@@ -15,6 +16,7 @@ brew 'hub'
 brew 'tree'
 brew 'node'
 brew 'trash'
+brew 'python'
 
 # Development
 
@@ -31,9 +33,4 @@ cask 'transmit'
 cask 'vlc'
 
 # Fonts
-# cask 'font-source-code-pro-for-powerline'
-# cask 'font-source-code-pro'
-# cask 'font-source-sans-pro'
-# cask 'font-source-serif-pro'
-# cask 'font-fira-code'
-# cask 'font-firacode-nerd-font-mono'
+cask 'font-hack-nerd-font'
