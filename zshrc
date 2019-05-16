@@ -68,13 +68,12 @@ AWS_DEFAULT_PROFILE='default'
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 
 # give plugin sources. These have to be given manually because we are using brew to manage them
-source /usr/local/opt/zsh-autosuggestions
-source /usr/local/opt/zsh-syntax-highlighting
+# source /usr/local/opt/zsh-syntax-highlighting
 
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git node npm brew sudo alias-tips z)
+plugins=(git node npm brew sudo alias-tips z zsh-autosuggestions zsh-syntax-highlighting)
 
 
 # User configuration

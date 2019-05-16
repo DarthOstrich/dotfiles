@@ -5,9 +5,6 @@ tap 'caskroom/fonts'
 
 # Install ZSH and plugins/themes
 brew 'zsh'
-# brew 'zsh-completions'
-brew 'zsh-autosuggestions'
-brew 'zsh-syntax-highlighting'
 
 # Install Binaries
 brew 'awscli'
