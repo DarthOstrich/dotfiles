@@ -38,7 +38,7 @@ sh makesymlinks.sh
 # Install Vim Plugins
 echo "Installing vim Plugins"
 vim +PluginInstall +qall
-echo "Done!
+echo "Done!"
 
 
 # Set macOS preferences
