@@ -12,7 +12,7 @@ brew tap homebrew/bundle
 brew bundle
 
 # install global npm modules
-npm i -g nodemon snyk
+npm i -g nodemon snyk prettier
 
 # Install oh-my-zsh to $HOME directory
 sh -c "$(cd && curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
