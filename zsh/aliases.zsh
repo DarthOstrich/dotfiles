@@ -8,6 +8,7 @@ alias code='code .'
 
 # Silver searcher ignore file link
 alias ag='ag --path-to-ignore ~/dotfiles/ag/.ignore'
+
 # LS lists information about files.
 # show slashes for directories.
 alias ls='ls -laF'

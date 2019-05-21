@@ -9,19 +9,30 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim' "Plugin manager
+
+" Themes
+Plugin 'mhartington/oceanic-next'
 Plugin 'jnurmine/zenburn' "Theme plugin
+
 Plugin 'mitermayer/vim-prettier'
 Plugin 'jiangmiao/auto-pairs' "Autocomplete brackets
 Plugin 'junegunn/fzf.vim' "Fuzzy Finder vim plugin
+Plugin 'mattn/emmet-vim' "Emmet, the best workflow tool
+Plugin 'pangloss/vim-javascript' "JS highlighting
+Plugin 'mxw/vim-jsx' "JSX syntax highlighting
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
 
-" my theme
-syntax on
-colors zenburn
+" Theme settings 
+syntax enable 
+colors OceanicNext
+if (has("termguicolors"))
+  set termguicolors
+endif
 
+ 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Text, tab and indent related
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -68,3 +79,6 @@ let g:prettier#autoformat = 0
 " runs prettier on file formats
 autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue PrettierAsync
 
+
+" Emmet
+let g:user_emmet_expandabbr_key='<Tab>'
