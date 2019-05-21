@@ -99,6 +99,12 @@ source $ZSH/oh-my-zsh.sh
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
+# VIM stuff
+# Sets fuzzy finder's default search function to AG, silver searcher
+export FZF_DEFAULT_COMMAND='ag --path-to-ignore ~/dotfiles/ag/.ignore  -l --nogroup  --nocolor --hidden -g ""'
+
+
+
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
@@ -107,6 +113,8 @@ source $ZSH/oh-my-zsh.sh
 # app opening aliases
 alias code='code .'
 
+# Silver searcher ignore file link
+alias ag='ag --path-to-ignore ~/dotfiles/ag/.ignore'
 # LS lists information about files.
 # show slashes for directories.
 alias ls='ls -laF'
@@ -208,10 +216,11 @@ alias up='git pull upstream master'
 alias got='git '
 alias get='git '
 
-alias zash='code ~/.zshrc'
+alias zash='vim ~/dotfiles/zshrc'
+alias vimrc='vim ~/dotfiles/vimrc'
 # alias bhswp='cd ~/Sites/bhs-wp/wp-content/themes/bhs'
 # alias bhszz='cd ~/Sites/bhs-wp-zz/wp-content/themes/bhs'
-alias zfrash='source ~/.zshrc'
+alias zfrash='source ~/dotfiles/zshrc'
 export PATH="/usr/local/sbin:$PATH"
 # alias ethminer='~/Desktop/ethminer/build/ethminer/ethminer'
 

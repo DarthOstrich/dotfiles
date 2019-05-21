@@ -1,0 +1,11 @@
+# Global
+node_modules/
+.DS_Store
+
+# Next.js
+*.log
+.next/
+.build/
+
+# Git
+.git

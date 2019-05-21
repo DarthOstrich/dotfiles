@@ -41,6 +41,3 @@ echo "Removing old preferences"
 rm ~/Library/Preferences/com.googlecode.iterm2.plist
 echo "creating symlink for new preferences"
 ln -s ~/dotfiles/preferences/com.googlecode.iterm2.plist ~/Library/Preferences/com.googlecode.iterm2.plist
-
-
-
