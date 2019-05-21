@@ -61,3 +61,10 @@ highlight Visual cterm=bold ctermbg=Blue ctermfg=NONE
 " let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 set title titlestring=
 
+" Prettier
+" Autosave
+" disables autosave feature
+let g:prettier#autoformat = 0
+" runs prettier on file formats
+autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue PrettierAsync
+

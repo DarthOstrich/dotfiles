@@ -101,6 +101,8 @@ source $ZSH/oh-my-zsh.sh
 
 # VIM stuff
 # Sets fuzzy finder's default search function to AG, silver searcher
+# It also sets a global ignore, to ignore things like node_modules. By default it will ignore stuff in
+# the .gitignore file in the pwd, but if you are nested it doesn't. This is a workaround.
 export FZF_DEFAULT_COMMAND='ag --path-to-ignore ~/dotfiles/ag/.ignore  -l --nogroup  --nocolor --hidden -g ""'
 
 
