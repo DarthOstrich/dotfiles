@@ -25,8 +25,15 @@ defaults write com.apple.dock autohide -bool true
 ###############################################################################
 # Terminal & iTerm 2                                                          #
 ###############################################################################
-# This may not need to be added in, as it's part of the iterm preferences
-# Don’t display the annoying prompt when quitting iTerm
-# defaults write com.googlecode.iterm2 PromptOnQuit -bool false
+
+
+
+###############################################################################
+# Audio Settings                                             
+###############################################################################
+# https://www.macrumors.com/how-to/enable-aptx-aac-bluetooth-audio-codecs-macos/
+
+
+
 
 echo "Done. Note that some of these changes require a logout/restart to take effect."
