@@ -17,6 +17,8 @@ brew 'node'
 brew 'trash'
 brew 'python'
 brew 'macvim'
+brew 'fzf'
+brew 'the_silver_searcher'
 # Development
 
 # Apps
