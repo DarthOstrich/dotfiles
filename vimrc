@@ -34,6 +34,19 @@ endif
 
  
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Core Functionality 
+ """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" deal with swps and backups here
+" create backups
+set backup
+" tell vim where to put its backup files
+set backupdir=/tmp
+" tell vim where to put swap files
+set dir=/tmp
+
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Text, tab and indent related
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 1 tab == 2 spaces
@@ -66,10 +79,13 @@ set clipboard=unnamed
 
 " adds blue highlight to vim in visual mode selections
 highlight Visual cterm=bold ctermbg=Blue ctermfg=NONE
-" iterm cursor changes depending on mode
-" let &t_SI = "\<Esc>]50;CursorShape=1\x7"
-" let &t_SR = "\<Esc>]50;CursorShape=2\x7"
-" let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+" Change cursor shape between insert and normal mode in iTerm2.app
+if $TERM_PROGRAM =~ "iTerm"
+    let &t_SI = "\<Esc>]50;CursorShape=1\x7" " Vertical bar in insert mode
+    let &t_EI = "\<Esc>]50;CursorShape=0\x7" " Block in normal mode
+endif
+
+" Shows the title within the window
 set title titlestring=
 
 " Prettier
