@@ -101,4 +101,6 @@ autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.gra
 let g:user_emmet_expandabbr_key='<Tab>'
 
 " Syntax stuff
-let g:graphql_javascript_tags=["gql", "graphql", "Relay.QL", "prisma"]
+" This lets vim know that .prisma files should be graphql. 
+" Stolen from vim-graphql/ftdetect/graphql.vim
+au BufRead,BufNewFile *.prisma setfiletype graphql
