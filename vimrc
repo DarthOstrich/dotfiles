@@ -20,6 +20,7 @@ Plugin 'junegunn/fzf.vim' "Fuzzy Finder vim plugin
 Plugin 'mattn/emmet-vim' "Emmet, the best workflow tool
 Plugin 'pangloss/vim-javascript' "JS highlighting
 Plugin 'mxw/vim-jsx' "JSX syntax highlighting
+Plugin 'jparise/vim-graphql' "graphql syntax highlighting
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -98,3 +99,6 @@ autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.gra
 
 " Emmet
 let g:user_emmet_expandabbr_key='<Tab>'
+
+" Syntax stuff
+let g:graphql_javascript_tags=["gql", "graphql", "Relay.QL", "prisma"]
