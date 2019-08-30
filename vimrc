@@ -18,8 +18,7 @@ Plug 'pangloss/vim-javascript' "JS highlighting
 Plug 'mxw/vim-jsx' "JSX syntax highlighting
 Plug 'jparise/vim-graphql' "graphql syntax highlighting
 Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'} "Nerdtree
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-"Plug 'valloric/youcompleteme' "YouCompleteMe autocompletion
+Plug 'neoclide/coc.nvim', {'branch': 'release'} "autocompletion
 
 " All of your Plugins must be added before the following line
 call plug#end()            " required
