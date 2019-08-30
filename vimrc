@@ -1,31 +1,28 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
 set rtp+=/usr/local/opt/fzf "Fuzzy finder, installed via homebrew
 
-call vundle#begin()
-
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim' "Plugin manager
+call plug#begin('~/.vim/plugged')
 
 " Themes
-Plugin 'mhartington/oceanic-next'
-Plugin 'jnurmine/zenburn' "Theme plugin
+Plug 'mhartington/oceanic-next'
+Plug 'jnurmine/zenburn' "Theme plugin
 
-Plugin 'mitermayer/vim-prettier'
-Plugin 'jiangmiao/auto-pairs' "Autocomplete brackets. 
-Plugin 'junegunn/fzf.vim' "Fuzzy Finder vim plugin
-" Plugin 'mattn/emmet-vim' "Emmet, the best workflow tool. This is kind of
+Plug 'mitermayer/vim-prettier'
+Plug 'jiangmiao/auto-pairs' "Autocomplete brackets. 
+Plug 'junegunn/fzf.vim' "Fuzzy Finder vim plugin
+" Plug 'mattn/emmet-vim' "Emmet, the best workflow tool. This is kind of
 " annoying because it takes over my tab
-Plugin 'pangloss/vim-javascript' "JS highlighting
-Plugin 'mxw/vim-jsx' "JSX syntax highlighting
-Plugin 'jparise/vim-graphql' "graphql syntax highlighting
-Plugin 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'} "Nerdtree
+Plug 'pangloss/vim-javascript' "JS highlighting
+Plug 'mxw/vim-jsx' "JSX syntax highlighting
+Plug 'jparise/vim-graphql' "graphql syntax highlighting
+Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'} "Nerdtree
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+"Plug 'valloric/youcompleteme' "YouCompleteMe autocompletion
 
 " All of your Plugins must be added before the following line
-call vundle#end()            " required
+call plug#end()            " required
 filetype plugin indent on    " required
 
 " Theme settings 
