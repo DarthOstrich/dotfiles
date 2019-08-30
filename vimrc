@@ -15,12 +15,14 @@ Plugin 'mhartington/oceanic-next'
 Plugin 'jnurmine/zenburn' "Theme plugin
 
 Plugin 'mitermayer/vim-prettier'
-Plugin 'jiangmiao/auto-pairs' "Autocomplete brackets
+Plugin 'jiangmiao/auto-pairs' "Autocomplete brackets. 
 Plugin 'junegunn/fzf.vim' "Fuzzy Finder vim plugin
-Plugin 'mattn/emmet-vim' "Emmet, the best workflow tool
+" Plugin 'mattn/emmet-vim' "Emmet, the best workflow tool. This is kind of
+" annoying because it takes over my tab
 Plugin 'pangloss/vim-javascript' "JS highlighting
 Plugin 'mxw/vim-jsx' "JSX syntax highlighting
 Plugin 'jparise/vim-graphql' "graphql syntax highlighting
+Plugin 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'} "Nerdtree
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -54,6 +56,12 @@ let g:netrw_banner=0
 let g:netrw_list_hide = '\(^\|\s\s\)\zs\.\S\+,\(^\|\s\s\)ntuser\.\S\+'
 autocmd FileType netrw set nolist
 
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => NERDTree 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"Changes NerdTree Toggle to Ctrl + n
+map <C-n> :NERDTreeToggle<CR> 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Text, tab and indent related
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
