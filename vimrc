@@ -9,14 +9,17 @@ call plug#begin('~/.vim/plugged')
 Plug 'mhartington/oceanic-next'
 Plug 'jnurmine/zenburn' "Theme plugin
 
-Plug 'mitermayer/vim-prettier'
-Plug 'jiangmiao/auto-pairs' "Autocomplete brackets. 
-Plug 'junegunn/fzf.vim' "Fuzzy Finder vim plugin
-" Plug 'mattn/emmet-vim' "Emmet, the best workflow tool. This is kind of
-" annoying because it takes over my tab
+" Language Syntax Support
 Plug 'pangloss/vim-javascript' "JS highlighting
 Plug 'mxw/vim-jsx' "JSX syntax highlighting
 Plug 'jparise/vim-graphql' "graphql syntax highlighting
+Plug 'digitaltoad/vim-pug' "Pug highlighting
+
+" Tools
+Plug 'mitermayer/vim-prettier'
+Plug 'jiangmiao/auto-pairs' "Autocomplete brackets. 
+Plug 'junegunn/fzf.vim' "Fuzzy Finder vim plugin
+" Plug 'mattn/emmet-vim' "A bit annoying because it takes over my Tab key
 Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'} "Nerdtree
 Plug 'neoclide/coc.nvim', {'branch': 'release'} "autocompletion
 
@@ -82,7 +85,7 @@ set shiftwidth=2
 set tabstop=2     " tab spacing
 
 set ai            " Auto indent
-set si            " Smart indent
+" set si            " Smart indent
 set wrap          " Wrap lines
 set nowrap        " Don't wrap text
 
@@ -116,10 +119,17 @@ endif
 " Shows the title within the window
 set title titlestring=
 
-" Prettier
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Prettier
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Autosave
 " disables autosave feature
 let g:prettier#autoformat = 0
+
+" print spaces between brackets
+" Prettier default: true
+let g:prettier#config#bracket_spacing = 'true'
+
 " runs prettier on file formats
 autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue PrettierAsync
 
