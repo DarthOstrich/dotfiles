@@ -19,6 +19,8 @@ Plug 'digitaltoad/vim-pug' "Pug highlighting
 Plug 'mitermayer/vim-prettier'
 Plug 'jiangmiao/auto-pairs' "Autocomplete brackets. 
 Plug 'junegunn/fzf.vim' "Fuzzy Finder vim plugin
+Plug 'tpope/vim-fugitive' "Git tools
+
 " Plug 'mattn/emmet-vim' "A bit annoying because it takes over my Tab key
 Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'} "Nerdtree
 Plug 'neoclide/coc.nvim', {'branch': 'release'} "autocompletion
