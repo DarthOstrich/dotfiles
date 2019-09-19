@@ -1,13 +1,15 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
+set exrc  										" Allows project specific .vimrc
 
-set rtp+=/usr/local/opt/fzf "Fuzzy finder, installed via homebrew
-
+" set rtp+=/usr/local/opt/fzf "Fuzzy finder, installed via homebrew
 call plug#begin('~/.vim/plugged')
 
 " Themes
 Plug 'mhartington/oceanic-next'
 Plug 'jnurmine/zenburn' "Theme plugin
+Plug 'ryanoasis/vim-devicons' "Icons for filetypes
+Plug 'vim-airline/vim-airline' "Status bar
 
 " Language Syntax Support
 Plug 'pangloss/vim-javascript' "JS highlighting
@@ -18,8 +20,11 @@ Plug 'digitaltoad/vim-pug' "Pug highlighting
 " Tools
 Plug 'mitermayer/vim-prettier'
 Plug 'jiangmiao/auto-pairs' "Autocomplete brackets. 
-Plug 'junegunn/fzf.vim' "Fuzzy Finder vim plugin
+Plug '/usr/local/opt/fzf'
+Plug 'junegunn/fzf.vim'
+
 Plug 'tpope/vim-fugitive' "Git tools
+
 
 " Plug 'mattn/emmet-vim' "A bit annoying because it takes over my Tab key
 Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'} "Nerdtree
@@ -63,6 +68,8 @@ autocmd FileType netrw set nolist
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "Changes NerdTree Toggle to Ctrl + n
 map <C-n> :NERDTreeToggle<CR> 
+autocmd VimEnter * NERDTree "Toggles Nerdtree on vim open
+let NERDTreeQuitOnOpen = 1 "closes NerdTree when opening a file
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Conquer of Completion 
@@ -143,3 +150,5 @@ let g:user_emmet_expandabbr_key='<Tab>'
 " This lets vim know that .prisma files should be graphql. 
 " Stolen from vim-graphql/ftdetect/graphql.vim
 au BufRead,BufNewFile *.prisma setfiletype graphql
+
+set secure "disables unsafe commands in project specific .vimrc
