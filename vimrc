@@ -10,6 +10,7 @@ Plug 'mhartington/oceanic-next'
 Plug 'jnurmine/zenburn' "Theme plugin
 Plug 'ryanoasis/vim-devicons' "Icons for filetypes
 Plug 'vim-airline/vim-airline' "Status bar
+Plug 'vim-airline/vim-airline-themes' "Applicable themes
 
 " Language Syntax Support
 Plug 'pangloss/vim-javascript' "JS highlighting
