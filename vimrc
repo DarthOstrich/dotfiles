@@ -27,7 +27,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-fugitive' "Git tools
 
 
-" Plug 'mattn/emmet-vim' "A bit annoying because it takes over my Tab key
+Plug 'mattn/emmet-vim' "A bit annoying because it takes over my Tab key
 Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'} "Nerdtree
 Plug 'neoclide/coc.nvim', {'branch': 'release'} "autocompletion
 
@@ -146,7 +146,7 @@ autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.gra
 
 
 " Emmet
-let g:user_emmet_expandabbr_key='<Tab>'
+" let g:user_emmet_expandabbr_key='<Tab>'
 
 " Syntax stuff
 " This lets vim know that .prisma files should be graphql. 
