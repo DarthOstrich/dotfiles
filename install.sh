@@ -29,7 +29,7 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/
 mkdir $HOME/Dev
 
 # Install Vundle for Vim
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+# git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 
 # Create symlinks
@@ -37,7 +37,7 @@ sh makesymlinks.sh
 
 # Install Vim Plugins
 echo "Installing vim Plugins"
-vim +PluginInstall +qall
+vim +PlugInstall +qall
 echo "Done!"
 
 

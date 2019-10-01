@@ -2,6 +2,15 @@ set nocompatible              " be iMproved, required
 filetype off                  " required
 set exrc  										" Allows project specific .vimrc
 
+
+"Auto install Plug https://github.com/junegunn/vim-plug/wiki/tips#automatic-installation
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
+
 " set rtp+=/usr/local/opt/fzf "Fuzzy finder, installed via homebrew
 call plug#begin('~/.vim/plugged')
 
