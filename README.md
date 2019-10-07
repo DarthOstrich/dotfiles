@@ -1,4 +1,4 @@
-Stolen from [https://github.com/kingluddite/dotfiles](KingLuddite)
+Stolen from [KingLuddite](https://github.com/kingluddite/dotfiles)
 # What is this?
 dotfiles are used to setup a fresh new dev environment
 
