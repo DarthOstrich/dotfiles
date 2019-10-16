@@ -42,10 +42,10 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'} "autocompletion
 
 " All of your Plugins must be added before the following line
 call plug#end()            " required
-filetype plugin indent on    " required
+" filetype plugin indent on    " automatically run by Plug 
+" syntax enable " automatically run by Plug 
 
 " Theme settings 
-syntax enable 
 colors OceanicNext
 if (has("termguicolors"))
   set termguicolors
@@ -53,7 +53,7 @@ endif
 
  
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Core Functionality 
+" Core Functionality (general settings, keyboard shortcuts)
  """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " deal with swps and backups here
 " create backups
@@ -62,8 +62,20 @@ set backup
 set backupdir=/tmp
 " tell vim where to put swap files
 set dir=/tmp
+set timeoutlen=1000        " speed vim up
+set ttimeoutlen=0          " https://stackoverflow.com/questions/37644682/why-is-vim-so-slow/37645334
+set ttyfast                " Rendering
+set tw=500
+" Disable Autocommenting
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+" map jk to esc
+:imap jk <Esc>
 
+" save with zz
+nnoremap zz :update<cr>
 
+" set clipboard to easily copy from vim and paste into OSx
+set clipboard=unnamed
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => netrw
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -122,11 +134,6 @@ set nowrap        " Don't wrap text
 set visualbell
 set t_vb=
 
-" save with zz
-nnoremap zz :update<cr>
-
-" set clipboard to easily copy from vim and paste into OSx
-set clipboard=unnamed
 
 " adds blue highlight to vim in visual mode selections
 highlight Visual cterm=bold ctermbg=Blue ctermfg=NONE
