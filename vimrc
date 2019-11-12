@@ -34,7 +34,6 @@ Plug 'jiangmiao/auto-pairs' "Autocomplete brackets.
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'tomtom/tcomment_vim'
-" Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive' "Git tools
 
 
