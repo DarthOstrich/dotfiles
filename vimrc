@@ -76,6 +76,10 @@ nnoremap zz :update<cr>
 
 " set clipboard to easily copy from vim and paste into OSx
 set clipboard=unnamed
+
+" remap Ctrl-p for finding files run Fzf :Files command
+nnoremap <C-p> :Files<Cr>
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => netrw
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
