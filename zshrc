@@ -104,7 +104,9 @@ source $ZSH/oh-my-zsh.sh
 # It also sets a global ignore, to ignore things like node_modules. By default it will ignore stuff in
 # the .gitignore file in the pwd, but if you are nested it doesn't. This is a workaround.
 # export FZF_DEFAULT_COMMAND='ag --path-to-ignore ~/dotfiles/ag/.ignore -l --nogroup --nocolor --hidden'
-export FZF_DEFAULT_COMMAND='rg --files --no-ignore-vcs --hidden'
+# export FZF_DEFAULT_COMMAND='rg --files --no-ignore-vcs --hidden'
+export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow -g "!{.git,node_modules}/*" 2> /dev/null'
+export FZF_DEFAULT_OPTS='--height 96% --reverse --preview "cat {}"'
 
 
 # source the aliases
