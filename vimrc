@@ -26,7 +26,7 @@ Plug 'pangloss/vim-javascript' "JS highlighting
 Plug 'mxw/vim-jsx' "JSX syntax highlighting
 Plug 'jparise/vim-graphql' "graphql syntax highlighting
 Plug 'digitaltoad/vim-pug' "Pug highlighting
-
+Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 " Tools
 Plug 'mitermayer/vim-prettier'
 Plug 'jiangmiao/auto-pairs' "Autocomplete brackets. 
