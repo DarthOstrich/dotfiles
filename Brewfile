@@ -26,7 +26,8 @@ cask 'alfred'
 cask 'iterm2'
 cask 'visual-studio-code'
 cask 'slack'
-cask 'spectacle'
+# cask 'spectacle' # No longer maintained, sadly
+cask 'rectangle' # A Spectacle replacement
 # cask 'docker'
 cask 'firefox'
 cask 'google-chrome'
