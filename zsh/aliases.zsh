@@ -118,3 +118,5 @@ alias zfrash='source ~/dotfiles/zshrc'
 export PATH="/usr/local/sbin:$PATH"
 # alias ethminer='~/Desktop/ethminer/build/ethminer/ethminer'
 
+# Messing around
+alias 🤖='npm run develop'

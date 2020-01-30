@@ -1,6 +1,7 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
 set exrc  										" Allows project specific .vimrc
+set autoread                  " reload files 
 
 
 "Auto install Plug https://github.com/junegunn/vim-plug/wiki/tips#automatic-installation
@@ -20,6 +21,7 @@ Plug 'jnurmine/zenburn' "Theme plugin
 Plug 'ryanoasis/vim-devicons' "Icons for filetypes
 Plug 'vim-airline/vim-airline' "Status bar
 Plug 'vim-airline/vim-airline-themes' "Applicable themes
+Plug 'ap/vim-css-color' "  color name highlighter
 
 " Language Syntax Support
 Plug 'pangloss/vim-javascript' "JS highlighting
@@ -35,7 +37,7 @@ Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-fugitive' "Git tools
-
+Plug 'metakirby5/codi.vim'
 
 Plug 'mattn/emmet-vim' "A bit annoying because it takes over my Tab key
 Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'} "Nerdtree
@@ -120,7 +122,7 @@ inoremap <silent><expr> <Tab>
 " 1 tab == 2 spaces
 set shiftwidth=2
 set tabstop=2     " tab spacing
-
+set expandtab     " tabs are now spaces
 set ai            " Auto indent
 " set si            " Smart indent
 set wrap          " Wrap lines
