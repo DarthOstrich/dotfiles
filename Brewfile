@@ -18,7 +18,8 @@ brew 'trash'
 brew 'python'
 brew 'macvim'
 brew 'fzf'
-brew 'the_silver_searcher'
+# brew 'the_silver_searcher'
+brew 'ripgrep'
 # Development
 
 # Apps
