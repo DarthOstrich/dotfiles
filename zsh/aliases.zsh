@@ -5,6 +5,7 @@
 
 # app opening aliases
 alias code='code .'
+alias vim='nvim' # trick yoself!
 
 # Silver searcher ignore file link
 alias ag='ag --path-to-ignore ~/dotfiles/ag/.ignore'
