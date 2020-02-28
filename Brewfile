@@ -1,7 +1,7 @@
 # Taps
 tap 'caskroom/cask'
 tap 'caskroom/fonts'
-tap 'macvim-dev/macvim'
+# tap 'macvim-dev/macvim'
 # tap 'caskroom/versions'
 
 # Install ZSH and plugins/themes
@@ -16,7 +16,7 @@ brew 'tree'
 brew 'node'
 brew 'trash'
 brew 'python'
-brew 'macvim'
+brew 'nvim'
 brew 'fzf'
 # brew 'the_silver_searcher'
 brew 'ripgrep'
