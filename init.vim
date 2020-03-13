@@ -5,6 +5,8 @@ set autoread                  " reload files
 
 
 "Auto install Plug https://github.com/junegunn/vim-plug/wiki/tips#automatic-installation
+" This doesn't work for some reason
+" Need to install Plug first before this init file will work.
 if empty(glob('~/.config/nvim/plugged/plug.vim'))
   silent !curl -fLo ~/.config/nvim/plugged/plug.vim --create-dirs
     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
