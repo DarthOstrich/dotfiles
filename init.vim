@@ -58,6 +58,8 @@ if (has("termguicolors"))
    set termguicolors
  endif
 
+let g:gruvbox_contrast_dark = 'soft'
+
 " Search Highlight
 " hi Search guibg=peru guifg=wheat
 
