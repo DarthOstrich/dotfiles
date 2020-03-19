@@ -18,8 +18,9 @@ set rtp+=/usr/local/opt/fzf "Fuzzy finder, installed via homebrew
 call plug#begin('~/.config/nvim/plugged')
 
 " Themes
-Plug 'mhartington/oceanic-next'
-Plug 'jnurmine/zenburn' "Theme plugin
+" Plug 'mhartington/oceanic-next'
+Plug 'morhetz/gruvbox'
+" Plug 'jnurmine/zenburn' "Theme plugin
 Plug 'ryanoasis/vim-devicons' "Icons for filetypes
 Plug 'vim-airline/vim-airline' "Status bar
 Plug 'vim-airline/vim-airline-themes' "Applicable themes
@@ -48,11 +49,17 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'} "autocompletion
 " All of your Plugins must be added before the following line
 call plug#end()            " required
 
-" Theme settings 
-colors OceanicNext
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Theme Settings
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+colorscheme gruvbox
+" colors OceanicNext
 if (has("termguicolors"))
    set termguicolors
  endif
+
+" Search Highlight
+" hi Search guibg=peru guifg=wheat
 
   
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -83,6 +90,9 @@ set clipboard=unnamed
 " remap Ctrl-p for finding files run Fzf :Files command
 nnoremap <C-p> :Files<Cr>
 
+" Disable highlight with esc
+nnoremap <esc> :noh<return><esc>
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => netrw
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -98,7 +108,7 @@ nnoremap <C-p> :Files<Cr>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "Changes NerdTree Toggle to Ctrl + n
 map <C-n> :NERDTreeToggle<CR> 
-autocmd VimEnter * NERDTree "Toggles Nerdtree on vim open
+" autocmd VimEnter * NERDTree "Toggles Nerdtree on vim open
 let NERDTreeQuitOnOpen = 1 "closes NerdTree when opening a file
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -165,7 +175,7 @@ let g:prettier#autoformat = 0
 let g:prettier#config#bracket_spacing = 'true'
 
 " runs prettier on file formats
-autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue PrettierAsync
+autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.pug PrettierAsync
 
 
 " Emmet
