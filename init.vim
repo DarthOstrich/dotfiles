@@ -18,8 +18,8 @@ set rtp+=/usr/local/opt/fzf "Fuzzy finder, installed via homebrew
 call plug#begin('~/.config/nvim/plugged')
 
 " Themes
-" Plug 'mhartington/oceanic-next'
-Plug 'morhetz/gruvbox'
+Plug 'mhartington/oceanic-next'
+" Plug 'morhetz/gruvbox'
 " Plug 'jnurmine/zenburn' "Theme plugin
 Plug 'ryanoasis/vim-devicons' "Icons for filetypes
 Plug 'vim-airline/vim-airline' "Status bar
@@ -41,7 +41,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-fugitive' "Git tools
 Plug 'metakirby5/codi.vim'
-
+Plug 'frazrepo/vim-rainbow'
 Plug 'mattn/emmet-vim' "A bit annoying because it takes over my Tab key
 Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'} "Nerdtree
 Plug 'neoclide/coc.nvim', {'branch': 'release'} "autocompletion
@@ -52,18 +52,19 @@ call plug#end()            " required
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Theme Settings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-colorscheme gruvbox
-" colors OceanicNext
+" colorscheme gruvbox
+colors OceanicNext
 if (has("termguicolors"))
    set termguicolors
  endif
 
-let g:gruvbox_contrast_dark = 'soft'
+" let g:gruvbox_contrast_dark = 'soft'
 
 " Search Highlight
 " hi Search guibg=peru guifg=wheat
 
-  
+" Enable Rainbow Brackets  
+let g:rainbow_active = 1
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Core Functionality (general settings, keyboard shortcuts)
  """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -94,7 +95,9 @@ nnoremap <C-p> :Files<Cr>
 
 " Disable highlight with esc
 nnoremap <esc> :noh<return><esc>
-
+" add characters for punctuation, use `:set list` to toggle
+set showbreak=↪\ 
+set listchars=tab:→\ ,eol:↲,space:␣,trail:•,extends:⟩,precedes:⟨
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => netrw
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -177,7 +180,7 @@ let g:prettier#autoformat = 0
 let g:prettier#config#bracket_spacing = 'true'
 
 " runs prettier on file formats
-autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.pug PrettierAsync
+autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue PrettierAsync
 
 
 " Emmet
