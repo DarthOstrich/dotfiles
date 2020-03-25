@@ -34,14 +34,14 @@ Plug 'digitaltoad/vim-pug' "Pug highlighting
 Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 
 " Tools
-Plug 'mitermayer/vim-prettier'
+Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 Plug 'jiangmiao/auto-pairs' "Autocomplete brackets. 
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-fugitive' "Git tools
 Plug 'metakirby5/codi.vim'
-Plug 'frazrepo/vim-rainbow'
+" Plug 'frazrepo/vim-rainbow' "Disables normal syntax highlighting...stupid
 Plug 'mattn/emmet-vim' "A bit annoying because it takes over my Tab key
 Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'} "Nerdtree
 Plug 'neoclide/coc.nvim', {'branch': 'release'} "autocompletion
@@ -143,6 +143,7 @@ set ai            " Auto indent
 set wrap          " Wrap lines
 set nowrap        " Don't wrap text
 
+
 " Show line numbers
 " turn absolute line numbers on
 :set number
@@ -155,7 +156,6 @@ set nowrap        " Don't wrap text
 " Blink cursor on error instead of beeping (grr)
 set visualbell
 set t_vb=
-
 
 " adds blue highlight to vim in visual mode selections
 highlight Visual cterm=bold ctermbg=Blue ctermfg=NONE
@@ -180,7 +180,7 @@ let g:prettier#autoformat = 0
 let g:prettier#config#bracket_spacing = 'true'
 
 " runs prettier on file formats
-autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue PrettierAsync
+autocmd BufWritePre *.html,*.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue PrettierAsync
 
 
 " Emmet
