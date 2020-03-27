@@ -8,7 +8,7 @@ alias code='code .'
 alias vim='nvim' # trick yoself!
 
 # Silver searcher ignore file link
-alias ag='ag --path-to-ignore ~/dotfiles/ag/.ignore'
+# alias ag='ag --path-to-ignore ~/dotfiles/ag/.ignore'
 
 # LS lists information about files.
 # show slashes for directories.

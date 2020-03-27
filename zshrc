@@ -105,7 +105,8 @@ source $ZSH/oh-my-zsh.sh
 # the .gitignore file in the pwd, but if you are nested it doesn't. This is a workaround.
 # export FZF_DEFAULT_COMMAND='ag --path-to-ignore ~/dotfiles/ag/.ignore -l --nogroup --nocolor --hidden'
 # export FZF_DEFAULT_COMMAND='rg --files --no-ignore-vcs --hidden'
-export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow -g "!{.git,node_modules}/*" 2> /dev/null'
+export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow -g "!{.git,node_modules,package-lock.json}/*" 2> /dev/null'
+# export FZF_DEFAULT_COMMAND="rg --hidden --follow -g '!package-lock.json'"
 export FZF_DEFAULT_OPTS='--height 96% --reverse --preview "cat {}"'
 
 
