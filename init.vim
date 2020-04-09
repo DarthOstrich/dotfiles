@@ -78,7 +78,7 @@ set dir=/tmp
 set timeoutlen=1000        " speed vim up
 set ttimeoutlen=0          " https://stackoverflow.com/questions/37644682/why-is-vim-so-slow/37645334
 set ttyfast                " Rendering
-set tw=80
+set tw=80                  " Line Length set to 80
 " Disable Autocommenting
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 " map jk to esc
