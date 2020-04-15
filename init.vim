@@ -61,7 +61,7 @@ if (has("termguicolors"))
 " let g:gruvbox_contrast_dark = 'soft'
 
 " Search Highlight
-" hi Search guibg=peru guifg=wheat
+hi Search guibg=darkslateblue guifg=wheat
 
 " Enable Rainbow Brackets  
 let g:rainbow_active = 1
