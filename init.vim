@@ -60,6 +60,8 @@ if (has("termguicolors"))
 
 " let g:gruvbox_contrast_dark = 'soft'
 
+" adds blue highlight to vim in visual mode selections
+hi Visual cterm=bold ctermbg=blue ctermfg=NONE
 " Search Highlight
 hi Search guibg=darkslateblue guifg=wheat
 
@@ -78,7 +80,7 @@ set dir=/tmp
 set timeoutlen=1000        " speed vim up
 set ttimeoutlen=0          " https://stackoverflow.com/questions/37644682/why-is-vim-so-slow/37645334
 set ttyfast                " Rendering
-set tw=80                  " Line Length set to 80
+set tw=100                 " Line Length set to 80
 " Disable Autocommenting
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 " map jk to esc
@@ -157,8 +159,6 @@ set nowrap        " Don't wrap text
 set visualbell
 set t_vb=
 
-" adds blue highlight to vim in visual mode selections
-highlight Visual cterm=bold ctermbg=Blue ctermfg=NONE
 " Change cursor shape between insert and normal mode in iTerm2.app
 if $TERM_PROGRAM =~ "iTerm"
     let &t_SI = "\<Esc>]50;CursorShape=1\x7" " Vertical bar in insert mode
