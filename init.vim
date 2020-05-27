@@ -40,6 +40,7 @@ Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'tomtom/tcomment_vim'
 Plug 'tpope/vim-fugitive' "Git tools
+Plug 'tpope/vim-surround'
 Plug 'metakirby5/codi.vim'
 " Plug 'frazrepo/vim-rainbow' "Disables normal syntax highlighting...stupid
 Plug 'mattn/emmet-vim' "A bit annoying because it takes over my Tab key
@@ -80,7 +81,7 @@ set dir=/tmp
 set timeoutlen=1000        " speed vim up
 set ttimeoutlen=0          " https://stackoverflow.com/questions/37644682/why-is-vim-so-slow/37645334
 set ttyfast                " Rendering
-set tw=100                 " Line Length set to 80
+set tw=200                 " Line Length set to 200 😲
 " Disable Autocommenting
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 " map jk to esc
