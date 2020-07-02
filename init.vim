@@ -18,7 +18,8 @@ set rtp+=/usr/local/opt/fzf "Fuzzy finder, installed via homebrew
 call plug#begin('~/.config/nvim/plugged')
 
 " Themes
-Plug 'mhartington/oceanic-next'
+" Plug 'mhartington/oceanic-next'
+Plug 'haishanh/night-owl.vim'
 " Plug 'morhetz/gruvbox'
 " Plug 'jnurmine/zenburn' "Theme plugin
 Plug 'ryanoasis/vim-devicons' "Icons for filetypes
@@ -53,21 +54,27 @@ call plug#end()            " required
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Theme Settings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" colorscheme gruvbox
-colors OceanicNext
 if (has("termguicolors"))
    set termguicolors
  endif
+syntax enable
+
+" colors OceanicNext
+colorscheme night-owl
+
+" To enable the lightline theme
+let g:lightline = { 'colorscheme': 'nightowl' }
+
 
 " let g:gruvbox_contrast_dark = 'soft'
 
 " adds blue highlight to vim in visual mode selections
-hi Visual cterm=bold ctermbg=blue ctermfg=NONE
+hi Visual cterm=bold ctermbg=Yellow ctermfg=NONE
 " Search Highlight
 hi Search guibg=darkslateblue guifg=wheat
 
 " Enable Rainbow Brackets  
-let g:rainbow_active = 1
+" let g:rainbow_active = 1
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Core Functionality (general settings, keyboard shortcuts)
  """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
