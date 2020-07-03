@@ -2,7 +2,7 @@
 export ZSH=$HOME/.oh-my-zsh
 
 # Give the source for the theme
-ZSH_THEME="powerlevel9k/powerlevel9k"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # export the Android SDK info for React Native apps
 # export ANDROID_HOME=~/Library/Android/sdk
