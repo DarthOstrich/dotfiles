@@ -15,6 +15,9 @@ endif
 
 
 set rtp+=/usr/local/opt/fzf "Fuzzy finder, installed via homebrew
+
+
+
 call plug#begin('~/.config/nvim/plugged')
 
 " Themes
@@ -41,6 +44,7 @@ Plug 'jiangmiao/auto-pairs' "Autocomplete brackets.
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'tomtom/tcomment_vim'
+" Plug 'tpope/vim-commentary'
 " Plug 'scrooloose/nerdcommenter'
 Plug 'tpope/vim-fugitive' "Git tools
 Plug 'tpope/vim-surround'
@@ -52,6 +56,8 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'} "autocompletion
 
 " All of your Plugins must be added before the following line
 call plug#end()            " required
+
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Theme Settings
@@ -77,6 +83,7 @@ hi Search guibg=darkslateblue guifg=wheat
 
 " Enable Rainbow Brackets  
 " let g:rainbow_active = 1
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Core Functionality (general settings, keyboard shortcuts)
  """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -91,6 +98,7 @@ set timeoutlen=1000        " speed vim up
 set ttimeoutlen=0          " https://stackoverflow.com/questions/37644682/why-is-vim-so-slow/37645334
 set ttyfast                " Rendering
 set tw=200                 " Line Length set to 200 😲
+
 " Disable Autocommenting
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 " map jk to esc
@@ -110,6 +118,10 @@ nnoremap <esc> :noh<return><esc>
 " add characters for punctuation, use `:set list` to toggle
 set showbreak=↪\ 
 set listchars=tab:→\ ,eol:↲,space:␣,trail:•,extends:⟩,precedes:⟨
+
+" Setting for commenter to not replace hyphens
+let g:tcomment#replacements_xml = {'&': '&', '-': '-'}
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => netrw
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
