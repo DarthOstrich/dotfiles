@@ -41,6 +41,7 @@ Plug 'jiangmiao/auto-pairs' "Autocomplete brackets.
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'tomtom/tcomment_vim'
+" Plug 'scrooloose/nerdcommenter'
 Plug 'tpope/vim-fugitive' "Git tools
 Plug 'tpope/vim-surround'
 Plug 'metakirby5/codi.vim'
@@ -200,6 +201,7 @@ let g:user_emmet_leader_key=',' " Redefine emmet leader key. It's now ,,
 " This lets vim know that .prisma files should be graphql. 
 " Stolen from vim-graphql/ftdetect/graphql.vim
 au BufRead,BufNewFile *.prisma setfiletype graphql
+" au BufNewFile,BufRead *.svelte :set filetype=html
 
 set secure "disables unsafe commands in project specific .vimrc
 
