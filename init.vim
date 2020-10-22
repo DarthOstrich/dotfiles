@@ -51,7 +51,7 @@ Plug 'tpope/vim-surround'
 Plug 'metakirby5/codi.vim'
 " Plug 'frazrepo/vim-rainbow' "Disables normal syntax highlighting...stupid
 Plug 'mattn/emmet-vim' "A bit annoying because it takes over my Tab key
-Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'} "Nerdtree
+" Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'} "Nerdtree
 Plug 'neoclide/coc.nvim', {'branch': 'release'} "autocompletion
 
 " All of your Plugins must be added before the following line
@@ -136,9 +136,16 @@ let g:tcomment#replacements_xml = {'&': '&', '-': '-'}
 " => NERDTree 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "Changes NerdTree Toggle to Ctrl + n
-map <C-n> :NERDTreeToggle<CR> 
+" map <C-n> :NERDTreeToggle<CR> 
 " autocmd VimEnter * NERDTree "Toggles Nerdtree on vim open
-let NERDTreeQuitOnOpen = 1 "closes NerdTree when opening a file
+" let NERDTreeQuitOnOpen = 1 "closes NerdTree when opening a file
+
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Coc Explorer (The New NerdTree) 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+:nmap <space>e :CocCommand explorer<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Conquer of Completion 
