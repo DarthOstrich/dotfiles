@@ -58,6 +58,13 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'} "autocompletion
 call plug#end()            " required
 
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" External Settings files 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+source $HOME/.config/nvim/plug-config/coc.vim
+
+
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Theme Settings
