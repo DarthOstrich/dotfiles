@@ -125,7 +125,7 @@ nnoremap <C-p> :Files<Cr>
 
 
 "This unsets the "last search pattern" register by hitting return
-nnoremap <silent> <CR> :nohlsearch<CR><CR>
+nnoremap <silent> <CR> :nohlsearch<CR>
 
 " add characters for punctuation, use `:set list` to toggle
 set showbreak=↪\ 
