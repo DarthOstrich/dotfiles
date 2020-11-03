@@ -121,11 +121,11 @@ set clipboard=unnamed
 nnoremap <C-p> :Files<Cr>
 
 " Disable highlight with esc
-" nnoremap <esc> :noh<return><esc>
+nnoremap <esc> :noh<return><esc>
 
 
 "This unsets the "last search pattern" register by hitting return
-nnoremap <silent> <CR> :nohlsearch<CR>
+" nnoremap <silent> <CR> :nohlsearch<CR><CR>
 
 " add characters for punctuation, use `:set list` to toggle
 set showbreak=↪\ 
