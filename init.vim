@@ -22,7 +22,8 @@ call plug#begin('~/.config/nvim/plugged')
 
 " Themes
 " Plug 'mhartington/oceanic-next'
-Plug 'haishanh/night-owl.vim'
+" Plug 'haishanh/night-owl.vim'
+Plug 'embark-theme/vim', { 'as': 'embark' }
 " Plug 'morhetz/gruvbox'
 " Plug 'jnurmine/zenburn' "Theme plugin
 Plug 'ryanoasis/vim-devicons' "Icons for filetypes
@@ -75,10 +76,10 @@ if (has("termguicolors"))
 syntax enable
 
 " colors OceanicNext
-colorscheme night-owl
+colorscheme embark 
 
 " To enable the lightline theme
-let g:lightline = { 'colorscheme': 'nightowl' }
+let g:lightline = { 'colorscheme': 'embark' }
 
 
 " let g:gruvbox_contrast_dark = 'soft'
