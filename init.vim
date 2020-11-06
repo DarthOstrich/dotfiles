@@ -124,6 +124,9 @@ nnoremap <C-p> :Files<Cr>
 " Disable highlight with esc
 nnoremap <esc> :noh<return><esc>
 
+" Live Substitution
+set inccommand=split
+
 
 "This unsets the "last search pattern" register by hitting return
 " nnoremap <silent> <CR> :nohlsearch<CR><CR>
