@@ -11,7 +11,7 @@ brew 'zsh'
 brew 'awscli'
 brew 'awsebcli'
 brew 'git'
-brew 'hub'
+# brew 'hub'
 brew 'tree'
 brew 'node'
 brew 'trash'
@@ -33,7 +33,7 @@ cask 'rectangle' # A Spectacle replacement
 cask 'firefox'
 cask 'google-chrome'
 cask 'transmit'
-cask 'vlc'
+# cask 'vlc'
 cask 'timing'
 
 # Fonts

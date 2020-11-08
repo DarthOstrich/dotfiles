@@ -18,7 +18,7 @@ npm i -g nodemon snyk prettier
 sh -c "$(cd && curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 # Install Powerlevel9K theme
-git clone https://github.com/bhilburn/powerlevel9k.git ~/.oh-my-zsh/custom/themes/powerlevel9k
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 
 # Install oh-my-zsh plugins
 git clone https://github.com/djui/alias-tips.git ~/.oh-my-zsh/custom/plugins/alias-tips
@@ -36,9 +36,10 @@ mkdir $HOME/Dev
 sh makesymlinks.sh
 
 # Install Vim Plugins
-echo "Installing vim Plugins"
-vim +PlugInstall +qall
-echo "Done!"
+# TODO Figure out how to install nvim plugins
+# echo "Installing vim Plugins"
+# vim +PlugInstall +qall
+# echo "Done!"
 
 
 # Set macOS preferences
