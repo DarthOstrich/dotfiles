@@ -1,3 +1,6 @@
+# Recent Updates
+I moved my nvim config to a [separate repo](https://github.com/DarthOstrich/nvim)
+
 Stolen from [KingLuddite](https://github.com/kingluddite/dotfiles)
 
 # What is this?
