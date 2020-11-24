@@ -113,7 +113,7 @@ alias get='git '
 
 alias zash='nvim ~/dotfiles/zshrc'
 alias vimrc='nvim ~/dotfiles/vimrc'
-alias initvim='nvim ~/dotfiles/init.vim'
+alias initvim='nvim ~/.config/nvim/init.vim'
 # alias bhswp='cd ~/Sites/bhs-wp/wp-content/themes/bhs'
 # alias bhszz='cd ~/Sites/bhs-wp-zz/wp-content/themes/bhs'
 alias zfrash='source ~/dotfiles/zshrc'
