@@ -110,6 +110,7 @@ alias up='git pull upstream master'
 # when I mispell git commands the following 2 commands help
 alias got='git '
 alias get='git '
+alias ghre='gh repo view --web'
 
 alias zash='nvim ~/dotfiles/zshrc'
 alias vimrc='nvim ~/dotfiles/vimrc'
