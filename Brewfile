@@ -1,6 +1,6 @@
 # Taps
-tap 'caskroom/cask'
-tap 'caskroom/fonts'
+tap 'homebrew/cask'
+tap 'homebrew/cask-fonts'
 # tap 'macvim-dev/macvim'
 # tap 'caskroom/versions'
 
@@ -8,11 +8,11 @@ tap 'caskroom/fonts'
 # brew 'zsh' # don't need anymore comes with OSX
 
 # Install Binaries
+brew 'node'
 # brew 'awscli'
 # brew 'awsebcli'
 brew 'gh'
 brew 'tree'
-brew 'node'
 brew 'trash'
 brew 'nvim'
 brew 'fzf'
@@ -33,6 +33,3 @@ brew 'ripgrep'
 # cask 'transmit'
 # cask 'vlc'
 # cask 'timing'
-
-# Fonts
-cask 'font-hack-nerd-font'
