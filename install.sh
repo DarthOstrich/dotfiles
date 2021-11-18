@@ -17,7 +17,7 @@ npm i -g nodemon snyk prettier
 # Install oh-my-zsh to $HOME directory
 sh -c "$(cd && curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
-# Install Powerlevel9K theme
+# Install Powerlevel10K theme
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 
 # Install oh-my-zsh plugins
