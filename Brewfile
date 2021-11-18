@@ -19,6 +19,7 @@ brew 'fzf'
 brew 'ripgrep'
 
 # Development
+brew 'romkatv/powerlevel10k/powerlevel10k'
 
 # Apps
 # cask 'alfred'
