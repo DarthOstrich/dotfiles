@@ -121,6 +121,8 @@ export FZF_DEFAULT_OPTS='--height 96% --reverse --preview "cat {}"'
 # source the aliases
 source "$HOME/dotfiles/zsh/aliases.zsh"
 
+export PATH="$PATH:$HOME/.local/bin"
+
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
 
