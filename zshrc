@@ -1,13 +1,12 @@
+# set  python variable for pyenv
+export PATH="${HOME}/.pyenv/shims:${PATH}"
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
-
-export NVM_DIR="$HOME/.nvm"
-  [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && . "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
-  [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && . "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
@@ -113,9 +112,9 @@ source $ZSH/oh-my-zsh.sh
 # the .gitignore file in the pwd, but if you are nested it doesn't. This is a workaround.
 # export FZF_DEFAULT_COMMAND='ag --path-to-ignore ~/dotfiles/ag/.ignore -l --nogroup --nocolor --hidden'
 # export FZF_DEFAULT_COMMAND='rg --files --no-ignore-vcs --hidden'
-export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow -g "!{.git,node_modules,package-lock.json}/*" 2> /dev/null'
+# export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow -g "!{.git,node_modules,package-lock.json}/*" 2> /dev/null'
 # export FZF_DEFAULT_COMMAND="rg --hidden --follow -g '!package-lock.json'"
-export FZF_DEFAULT_OPTS='--height 96% --reverse --preview "cat {}"'
+# export FZF_DEFAULT_OPTS='--height 96% --reverse --preview "cat {}"'
 
 
 # source the aliases
