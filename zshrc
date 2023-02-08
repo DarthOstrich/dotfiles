@@ -17,6 +17,9 @@ source $(brew --prefix)/opt/powerlevel10k/powerlevel10k.zsh-theme
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+# plugins
+# source ~/.oh-my-zsh/custom/plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh
+
 # export the Android SDK info for React Native apps
 # export ANDROID_HOME=~/Library/Android/sdk
 # export PATH=$PATH:$ANDROID_HOME/tools
@@ -80,7 +83,7 @@ AWS_DEFAULT_PROFILE='default'
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git node npm brew sudo alias-tips z zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(git node npm brew sudo alias-tips zsh-autosuggestions zsh-syntax-highlighting)
 
 
 # User configuration
@@ -143,3 +146,11 @@ export PATH="$PATH:$HOME/.rvm/bin"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+eval "$(zoxide init zsh)"
+
+source "$HOME/dotfiles/ghTools/ghTools.sh"
+
+
+# Load Angular CLI autocompletion.
+source <(ng completion script)
