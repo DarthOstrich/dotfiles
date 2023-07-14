@@ -1,3 +1,6 @@
+# For testing
+# zmodload zsh/zprof
+
 # set  python variable for pyenv
 export PATH="${HOME}/.pyenv/shims:${PATH}"
 
@@ -26,15 +29,6 @@ source $(brew --prefix)/opt/powerlevel10k/powerlevel10k.zsh-theme
 # export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 # Customise the Powerlevel9k prompts
-# POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon dir vcs)
-# Default
-# POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs history time)
-# POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status aws_eb_env nvm)
-
-
-# POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
-# POWERLEVEL9K_SHORTEN_DIR_LENGTH=2
-# POWERLEVEL9K_SHORTEN_DELIMITER=""
 POWERLEVEL9K_SHORTEN_STRATEGY="truncate_folders"
 
 # setup default AWS Profile
@@ -154,3 +148,6 @@ source "$HOME/dotfiles/ghTools/ghTools.sh"
 
 # Load Angular CLI autocompletion.
 # source <(ng completion script)
+
+# For testing
+# zprof
