@@ -5,6 +5,7 @@ $directory\
 [\ueb70](bg:#394260 fg:#769ff0)\
 $git_branch\
 $git_status\
+$git_state\
 [\ueb70](bg:#9ece6a fg:#394260)\
 $nodejs\
 [\ueb70](bg:#24283b fg:#9ece6a)\
