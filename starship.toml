@@ -1,0 +1,63 @@
+format = """
+[  ](bg:#a3aed2 fg:#090c0c)\
+[](bg:#769ff0 fg:#a3aed2)\
+$directory\
+$git_branch\
+$git_status\
+$nodejs\
+$rust\
+$golang\
+$php\
+$time\
+\n$character"""
+
+[directory]
+style = "fg:#e3e5e5 bg:#769ff0"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = " "
+"Pictures" = " "
+
+[git_branch]
+symbol = ""
+# style = "bg:#394260"
+format = '[[ $symbol $branch ](fg:#769ff0 bg:#394260)]($style)'
+
+[git_status]
+style = "bg:#394260 fg:#769ff0"
+format = '([\[$all_status$ahead_behind\] ]($style))'
+# # conflicted = '🏳'
+ahead = '⇡${count}'
+# # diverged = '⇕⇡${ahead_count}⇣${behind_count}'
+behind = '⇣${count}'
+# # up_to_date = '✓'
+untracked = '[?$count](bg:#394260 fg:#ff9e64)'
+stashed = '[*$count](bg:#394260 fg:#e0af68)'
+modified = '[!$count](bg:#394260 fg:#f7768e)'
+staged = '[++$count](bg:#394260 fg:#9ece6a)'
+# # renamed = '👅'
+# # deleted = '🗑'
+#
+[nodejs]
+symbol = ""
+format = '[[ $symbol ($version) ](fg:#414868 bg:#9ece6a)]($style)'
+
+[rust]
+symbol = ""
+style = "bg:#212736"
+format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
+
+[golang]
+symbol = ""
+style = "bg:#212736"
+format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
+
+[php]
+symbol = ""
+style = "bg:#212736"
+format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'

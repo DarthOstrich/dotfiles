@@ -15,10 +15,11 @@ fi
 export ZSH=$HOME/.oh-my-zsh
 
 # Give the source for the theme
-source $(brew --prefix)/share/powerlevel10k/powerlevel10k.zsh-theme
+# source $(brew --prefix)/share/powerlevel10k/powerlevel10k.zsh-theme
+eval "$(starship init zsh)"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+# [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # plugins
 # source ~/.oh-my-zsh/custom/plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh
@@ -29,7 +30,7 @@ source $(brew --prefix)/share/powerlevel10k/powerlevel10k.zsh-theme
 # export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 # Customise the Powerlevel9k prompts
-POWERLEVEL9K_SHORTEN_STRATEGY="truncate_folders"
+# POWERLEVEL9K_SHORTEN_STRATEGY="truncate_folders"
 
 # setup default AWS Profile
 AWS_DEFAULT_PROFILE='default'
@@ -77,7 +78,8 @@ AWS_DEFAULT_PROFILE='default'
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git node npm brew sudo alias-tips zsh-autosuggestions zsh-syntax-highlighting)
+# plugins=(git node npm brew sudo alias-tips zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(git node npm brew sudo)
 
 
 # User configuration
