@@ -1,5 +1,5 @@
-# For testing
-# zmodload zsh/zprof
+# for startup profiling
+zmodload zsh/zprof
 
 # set  python variable for pyenv
 export PYENV_ROOT="$HOME/.pyenv"
@@ -153,9 +153,9 @@ source "$HOME/dotfiles/ghTools/ghTools.sh"
 # Load Angular CLI autocompletion.
 # source <(ng completion script)
 
-# For testing
-# zprof
-
 # source copilot
 source "$HOME/dotfiles/zsh/copilot.zsh"
 eval "$(gh copilot alias -- zsh)"
+
+# for startup profiling
+# zprof
