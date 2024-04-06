@@ -1,5 +1,5 @@
 # for startup profiling
-zmodload zsh/zprof
+# zmodload zsh/zprof
 
 # set  python variable for pyenv
 export PYENV_ROOT="$HOME/.pyenv"
