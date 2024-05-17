@@ -154,8 +154,9 @@ source "$HOME/dotfiles/ghTools/ghTools.sh"
 # source <(ng completion script)
 
 # source copilot
-source "$HOME/dotfiles/zsh/copilot.zsh"
-eval "$(gh copilot alias -- zsh)"
+# not needed anymore?
+# source "$HOME/dotfiles/zsh/copilot.zsh"
+# eval "$(gh copilot alias -- zsh)"
 
 # for startup profiling
 # zprof
