@@ -1,5 +1,5 @@
 # for startup profiling
-# zmodload zsh/zprof
+zmodload zsh/zprof
 
 # set  python variable for pyenv
 export PYENV_ROOT="$HOME/.pyenv"
@@ -80,7 +80,13 @@ AWS_DEFAULT_PROFILE='default'
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git npm alias-tips zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(
+  git 
+  npm 
+  alias-tips 
+  zsh-autosuggestions 
+  zsh-syntax-highlighting
+)
 # plugins=(git node npm brew sudo zsh-autosuggestions zsh-syntax-highlighting)
 
 
@@ -142,7 +148,8 @@ export PATH="$PATH:$HOME/.rvm/bin"
 
 
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+# This prevents nvm from checking versions at every shell startup. It also lazy loads nvm.
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" --no-use
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 eval "$(zoxide init zsh)"
@@ -159,4 +166,4 @@ source "$HOME/dotfiles/ghTools/ghTools.sh"
 # eval "$(gh copilot alias -- zsh)"
 
 # for startup profiling
-# zprof
+zprof
