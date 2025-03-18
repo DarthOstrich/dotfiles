@@ -1,5 +1,5 @@
 # for startup profiling
-zmodload zsh/zprof
+# zmodload zsh/zprof
 
 # set  python variable for pyenv
 export PYENV_ROOT="$HOME/.pyenv"
@@ -166,4 +166,4 @@ source "$HOME/dotfiles/ghTools/ghTools.sh"
 # eval "$(gh copilot alias -- zsh)"
 
 # for startup profiling
-zprof
+# zprof
