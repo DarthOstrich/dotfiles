@@ -6,7 +6,8 @@
 # app opening aliases
 alias code='code .'
 alias vim='nvim' # trick yoself!
-alias nvim="NVIM_APPNAME=nvim-lazy nvim"
+# custom nvim 
+# alias nvim="NVIM_APPNAME=nvim nvim"
 
 # Silver searcher ignore file link
 # alias ag='ag --path-to-ignore ~/dotfiles/ag/.ignore'
@@ -127,5 +128,3 @@ alias amp="amplify"
 
 # Messing around
 alias 🤖='npm run develop'
-
-# alias vv="NVIM_APPNAME=nvim-lazy nvim"
