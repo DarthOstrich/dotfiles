@@ -1,0 +1,18 @@
+{
+  "enabledPlugins": {
+    "lua-lsp@claude-plugins-official": true,
+    "superpowers@claude-plugins-official": true
+  },
+  "theme": "auto",
+  "permissions": {
+    "allow": [
+      "Read",
+      "Bash(ls *)",
+      "Bash(find *)",
+      "Bash(grep *)",
+      "Bash(cat *)",
+      "Bash(head *)",
+      "Bash(tail *)"
+    ]
+  }
+}
