@@ -46,3 +46,7 @@ echo "Creating symlink for Claude global rules"
 ln -sf ~/dotfiles/claude/CLAUDE.md ~/.claude/CLAUDE.md
 echo "Creating symlink for Claude settings"
 ln -sf ~/dotfiles/claude/settings.json ~/.claude/settings.json
+
+echo "Creating symlink for Ghostty config"
+mkdir -p ~/.config/ghostty
+ln -sf ~/dotfiles/ghostty/config ~/.config/ghostty/config
