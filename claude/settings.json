@@ -1,9 +1,4 @@
 {
-  "enabledPlugins": {
-    "lua-lsp@claude-plugins-official": true,
-    "superpowers@claude-plugins-official": true
-  },
-  "theme": "auto",
   "permissions": {
     "allow": [
       "Read",
@@ -18,5 +13,19 @@
       "Edit(.claude/settings.json)",
       "Edit(.claude/settings.local.json)"
     ]
-  }
+  },
+  "enabledPlugins": {
+    "lua-lsp@claude-plugins-official": true,
+    "superpowers@claude-plugins-official": true,
+    "agent-skills@addy-agent-skills": true
+  },
+  "extraKnownMarketplaces": {
+    "addy-agent-skills": {
+      "source": {
+        "source": "github",
+        "repo": "addyosmani/agent-skills"
+      }
+    }
+  },
+  "theme": "auto"
 }
