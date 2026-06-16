@@ -4,7 +4,12 @@
 # set  python variable for pyenv
 export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
+# Lazy-load pyenv: only initializes the first time pyenv is actually called
+pyenv() {
+  unfunction pyenv
+  eval "$(command pyenv init -)"
+  pyenv "$@"
+}
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
@@ -94,6 +99,24 @@ plugins=(
 export PATH=/usr/local/sbin:$PATH
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 # export MANPATH="/usr/local/man:$MANPATH"
+
+# Speed up compinit: intercept OMZ's call and skip the slow fpath rescan when
+# the dump is < 24h old. OMZ never uses -C, so it rebuilds from scratch every
+# startup. This override injects -C when the dump is fresh, then restores itself.
+autoload -Uz compinit
+_fast_compinit() {
+  unfunction compinit
+  autoload -Uz compinit  # restore the real compinit after removing the wrapper
+  local dump="${ZDOTDIR:-$HOME}/.zcompdump"
+  local i prev=""
+  for i in "$@"; do [[ "$prev" == "-d" ]] && dump="$i"; prev="$i"; done
+  if [[ -f "$dump" ]] && (( $(date +%s) - $(stat -f %m "$dump") < 86400 )); then
+    compinit -C "$@"
+  else
+    compinit "$@"
+  fi
+}
+compinit() { _fast_compinit "$@" }
 
 source $ZSH/oh-my-zsh.sh
 
