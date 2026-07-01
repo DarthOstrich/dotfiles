@@ -1,36 +1,39 @@
 # Taps
 tap 'homebrew/cask'
 tap 'homebrew/cask-fonts'
-# tap 'macvim-dev/macvim'
-# tap 'caskroom/versions'
 
-# Install ZSH and plugins/themes 
+# Install ZSH and plugins/themes
 # brew 'zsh' # don't need anymore comes with OSX
 
 # Install Binaries
 brew 'node'
-# brew 'awscli'
-# brew 'awsebcli'
+brew 'nvm'
 brew 'gh'
 brew 'tree'
 brew 'trash'
-brew 'nvim'
+brew 'neovim'
 brew 'fzf'
 brew 'ripgrep'
+brew 'bat'
+brew 'jq'
+brew 'lazygit'
 
-# Development
-brew 'romkatv/powerlevel10k/powerlevel10k'
+# Shell prompt & navigation
+brew 'starship'
+brew 'zoxide'
+
+# Language version managers
+brew 'pyenv'
 
 # Apps
+cask 'ghostty'
+cask 'claude-code'
+cask 'warp'
 # cask 'alfred'
 # cask 'iterm2'
 # cask 'visual-studio-code'
 # cask 'slack'
-# cask 'spectacle' # No longer maintained, sadly
-# cask 'rectangle' # A Spectacle replacement
+# cask 'rectangle'
 # cask 'docker'
 # cask 'firefox'
 # cask 'google-chrome'
-# cask 'transmit'
-# cask 'vlc'
-# cask 'timing'

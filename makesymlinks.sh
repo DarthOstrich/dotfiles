@@ -8,7 +8,7 @@
 
 dir=~/dotfiles                    # dotfiles directory
 olddir=~/dotfiles_old             # old dotfiles backup directory
-files="zshrc .p10k.zsh."    # list of files/folders to symlink in homedir
+files="zshrc"               # list of files/folders to symlink in homedir
 
 ##########
 
@@ -50,3 +50,13 @@ ln -sf ~/dotfiles/claude/settings.json ~/.claude/settings.json
 echo "Creating symlink for Ghostty config"
 mkdir -p ~/.config/ghostty
 ln -sf ~/dotfiles/ghostty/config ~/.config/ghostty/config
+
+echo "Creating symlink for Starship config"
+mkdir -p ~/.config
+ln -sf ~/dotfiles/starship.toml ~/.config/starship.toml
+
+echo "Creating symlink for Kitty config"
+mkdir -p ~/.config/kitty
+ln -sf ~/dotfiles/kitty/kitty.conf ~/.config/kitty/kitty.conf
+ln -sf ~/dotfiles/kitty/Catppuccin-Mocha.conf ~/.config/kitty/Catppuccin-Mocha.conf
+ln -sf ~/dotfiles/kitty/current-theme.conf ~/.config/kitty/current-theme.conf
