@@ -177,7 +177,7 @@ export NVM_DIR="$HOME/.nvm"
 
 eval "$(zoxide init zsh)"
 
-source "$HOME/dotfiles/ghTools/ghTools.sh"
+# source "$HOME/dotfiles/ghTools/ghTools.sh"
 
 
 # Load Angular CLI autocompletion.
