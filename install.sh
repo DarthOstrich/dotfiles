@@ -28,7 +28,7 @@ mkdir $HOME/Dev
 git clone https://github.com/DarthOstrich/nvim ~/.config/nvim
 
 # Create symlinks
-sh makesymlinks.sh
+bash makesymlinks.sh
 
 
 # Set macOS preferences

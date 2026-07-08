@@ -12,6 +12,24 @@ files="zshrc"               # list of files/folders to symlink in homedir
 
 ##########
 
+# figure out where this script actually lives so we can detect a mismatch
+scriptdir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
+# the symlinks are all created relative to $dir (~/dotfiles). If this repo was
+# cloned somewhere else (e.g. ~/dev/dotfiles), every symlink will point at a
+# path that doesn't exist. Bail out loudly instead of creating broken links.
+if [ "$scriptdir" != "$(cd "$dir" 2>/dev/null && pwd)" ]; then
+    echo "ERROR: symlinks would point to the wrong place." >&2
+    echo "  This repo is located at: $scriptdir" >&2
+    echo "  But the symlinks are created relative to: $dir" >&2
+    echo "" >&2
+    echo "  The dotfiles repo must live at $dir for the symlinks to resolve." >&2
+    echo "  Either move/clone it there:" >&2
+    echo "      mv \"$scriptdir\" \"$dir\"" >&2
+    echo "  or update the 'dir' variable in this script to \"$scriptdir\"." >&2
+    exit 1
+fi
+
 # create dotfiles_old in homedir
 echo -n "Creating $olddir for backup of any existing dotfiles in ~ ..."
 mkdir -p $olddir
