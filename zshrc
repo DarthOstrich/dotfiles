@@ -171,9 +171,10 @@ export PATH="$PATH:$HOME/.rvm/bin"
 
 
 export NVM_DIR="$HOME/.nvm"
-# This prevents nvm from checking versions at every shell startup. It also lazy loads nvm.
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" --no-use
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+[ -d "$NVM_DIR" ] || mkdir -p "$NVM_DIR"
+# nvm is installed via Homebrew; source from the brew opt path. --no-use prevents nvm from checking versions at every shell startup (lazy loads).
+[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh" --no-use
+[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
 eval "$(zoxide init zsh)"
 
