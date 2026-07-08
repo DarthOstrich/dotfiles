@@ -8,7 +8,6 @@ if test ! $(which brew); then
 fi
 
 # Install all our dependencies with bundle (See Brewfile)
-brew tap homebrew/bundle
 brew bundle
 
 # install global npm modules

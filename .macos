@@ -29,7 +29,17 @@ defaults write com.apple.dock autohide -bool true
 
 
 ###############################################################################
-# Audio Settings                                             
+# Keyboard                                                                    #
+###############################################################################
+
+# Fastest key repeat rate (lower is faster; 1 is faster than the UI minimum)
+defaults write NSGlobalDomain KeyRepeat -int 1
+
+# Shortest delay before a held key starts repeating (lower is faster)
+defaults write NSGlobalDomain InitialKeyRepeat -int 10
+
+###############################################################################
+# Audio Settings
 ###############################################################################
 # https://www.macrumors.com/how-to/enable-aptx-aac-bluetooth-audio-codecs-macos/
 

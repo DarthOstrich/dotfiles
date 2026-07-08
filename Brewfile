@@ -1,7 +1,3 @@
-# Taps
-tap 'homebrew/cask'
-tap 'homebrew/cask-fonts'
-
 # Install ZSH and plugins/themes
 # brew 'zsh' # don't need anymore comes with OSX
 
