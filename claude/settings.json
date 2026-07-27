@@ -16,6 +16,10 @@
       "Edit(~/.claude/settings.local.json)",
       "Edit(.claude/settings.json)",
       "Edit(.claude/settings.local.json)"
+    ],
+    "deny": [
+      "Read(**/*.env)",
+      "Edit(**/*.env)"
     ]
   },
   "enabledPlugins": {
