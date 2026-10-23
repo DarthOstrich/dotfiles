@@ -65,6 +65,10 @@
 # format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
 "$schema" = 'https://starship.rs/config-schema.json'
 
+# Raise from the 500ms default: `node --version` (run by the [nodejs] module)
+# can exceed 500ms during shell startup under load, which triggers a timeout warning.
+command_timeout = 2000
+
 format = """
 $os\
 [](bg:peach fg:lavender)\
