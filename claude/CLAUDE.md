@@ -29,6 +29,10 @@
 
 - Always use semantic HTML elements (e.g. `<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, `<aside>`, `<footer>`, `<button>`, `<figure>`, etc.) instead of generic `<div>` or `<span>` when a semantic element fits.
 
+## Word Choice
+
+- Never use the word "clobber" (e.g. "clobber the file"). Use plain alternatives like "overwrite," "discard," or "replace" instead.
+
 ## Angular
 
 When working in an Angular project (detected by the presence of `angular.json` or `@angular/core` imports):
